@@ -9,7 +9,7 @@
  <p><img src="img/banniere.jpg"  alt=""></p>
  <br/>
  <div class="row">
-    	<a href="http://www.vinci-melun.org"><img src="img/.jpg"></a>
+    	<a href="http://www.vinci-melun.org"><img src="img/logo-ldv.jpg"></a>
     	<a href="http://www."><img src="img/.jpg"></a>
     	<a href="http://www.diderot.org"><img src="img/.jpg"></a>
 </div>
