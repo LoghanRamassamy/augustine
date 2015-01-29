@@ -1,6 +1,7 @@
 <?php 
-require_once('inc/bdd_conf.php');
-require_once('inc/fonctions.php');
+
+  require_once('inc/bdd_conf.php');
+  require_once('inc/fonctions.php');
 
 if (empty($_SESSION['authlevel']) || $_SESSION['authlevel'] < 3) {    
     header('Location: index.php');
@@ -28,6 +29,8 @@ if (empty($_SESSION['authlevel']) || $_SESSION['authlevel'] < 3) {
       header('Location: user.php');
       exit();
   }
+
+?>
 
  /* old code 
     // Gestion utilisateur, suppression d'un utilisateur.

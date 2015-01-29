@@ -16,26 +16,26 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="actualite.php">&nbsp;&nbsp;Actualités&nbsp;&nbsp;</a>
+                <li><a href="actualite.php">Actualités</a>
                 </li>
-                <li><a href="galerie.php">&nbsp;&nbsp;Galerie&nbsp;&nbsp;</a>
+                <li><a href="galerie.php">Galerie</a>
                 </li>
-                <li><a href="historique.php">&nbsp;&nbsp;Historique&nbsp;&nbsp;</a>
+                <li><a href="historique.php">Historique</a>
                 </li>
-                <li><a href="contact.php">&nbsp;&nbsp;Contact&nbsp;&nbsp;</a>
+                <li><a href="contact.php">Contact</a>
                 </li>
-                <li><a href="sponsors.php">&nbsp;&nbsp;Sponsors</a>
+                <li><a href="sponsors.php">Sponsors</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://facebook.com/projetaugustinemelun" target="_blank"><font color="#3b5998">&nbsp;&nbsp;facebook&nbsp;&nbsp;</font></a>
+                <li><a href="http://facebook.com/projetaugustinemelun" target="_blank"><font color="#3b5998"><img src="img/Facebook.png"></font></a>
                 </li>
-                <li><a href="http://twitter.com/ProjetAugustine" target="_blank"><font color="#4099FF">&nbsp;&nbsp;twitter&nbsp;&nbsp;</font></a>
+                <li><a href="http://twitter.com/ProjetAugustine" target="_blank"><font color="#4099FF"><img src="img/T.png"></font></a>
                 </li>
                 <ul class="nav navbar-nav navbar-right navcompte">
                   <li class="dropdown" id="menuLogin">
                 <?php if (isset($_SESSION['user'])) : ?>
-                  <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">&nbsp;&nbsp;Admin &nbsp;&nbsp;</a>
+                  <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Admin</a>
                        <div class="dropdown-menu" style="padding:17px;">
                          <?php if ($_SESSION['authlevel'] == 3) : ?>
                            <p style="padding:1px;"><a

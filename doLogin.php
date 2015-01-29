@@ -1,9 +1,11 @@
-<?php include_once('inc/bdd_conf.php'); // ceci inclut le fichier bdd_conf.php
-      include_once('inc/fonctions.php');// ceci inclut le fichier fonctions.php
+<?php 
+
+    include_once('inc/bdd_conf.php'); // inclut le fichier bdd_conf.php
+    include_once('inc/fonctions.php');
 
 if (isset($_POST['username'])) 
 {
-    // est-ce un user du système ?
+    // est-ce un utilisateur du système ?
     $user = getUserByNamePw($_POST['username'], $_POST['password']);
     if ($user)
     {
@@ -14,3 +16,5 @@ if (isset($_POST['username']))
     }
 }
 header('Location: index.php');
+
+?>
