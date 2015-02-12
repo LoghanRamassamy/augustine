@@ -74,6 +74,35 @@ function createUser(){
    return $res; // voir API mysql_query pour connaitre le sens de la valeur retournée
 }
 
+function getMsgContact($tab)
+{
+	global $pdo ;
+	
+	try
+	{
+		$civilite = $tab['civilite'];
+		$nom = $tab['nom'];
+		$prenom = $tab['prenom'];
+		$objet = $tab['objet'];
+		$message = $tab['message'];
+
+		$query = "INSERT INTO contact VALUES ('', :civilite, :nom, :prenom, :objet, :message)";
+
+		$prep = $pdo->prepare($query); // On affecte la preparation a $prep ...
+		$prep->bindValue(':civilite', $civilite, PDO::PARAM_STR); // ... puis on traite $prep
+		$prep->bindValue(':nom', $nom, PDO::PARAM_STR);
+		$prep->bindValue(':prenom', $prenom, PDO::PARAM_STR);
+		$prep->bindValue(':objet', $objet, PDO::PARAM_STR);
+		$prep->bindValue(':message', $message, PDO::PARAM_STR);
+
+		$prep->execute();
+	}
+	catch ( Exception $e )
+	{
+		die ("erreur dans la requete ".$e->getMessage());
+	}
+}
+
 function getUserByNamePw($name, $pw) {
   //TODO
   $user = array('id'=>1, 'name'=>'testName', 'authlevel'=> 3, 'pass'=>'pass');
